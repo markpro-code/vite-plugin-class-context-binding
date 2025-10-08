@@ -17,7 +17,6 @@
     "dev": "vite",
     "build": "rm demo/*.tgz && npm pack --pack-destination ./demo && mv demo/*.tgz demo/vite-plugin.tgz && cd demo && rm -rf node_modules && pnpm install && npm run build",
     "test": "vitest",
-    "demo": "cd ",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
