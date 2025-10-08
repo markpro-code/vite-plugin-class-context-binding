@@ -1,0 +1,58 @@
+{
+  "name": "vite-plugin-class-context-binding",
+  "version": "1.0.0",
+  "description": "A Vite plugin to solve class member context binding problem.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "rm demo/*.tgz && npm pack --pack-destination ./demo && mv demo/*.tgz demo/vite-plugin.tgz && cd demo && rm -rf node_modules && pnpm install && npm run build",
+    "test": "vitest",
+    "demo": "cd ",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markpro-code/vite-plugin-class-context-binding.git"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markpro-code/vite-plugin-class-context-binding/issues"
+  },
+  "homepage": "https://github.com/markpro-code/vite-plugin-class-context-binding#readme",
+  "devDependencies": {
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
+    "vite": "^7.1.7",
+    "vitest": "^3.2.4",
+    "vue": "^3.5.22"
+  },
+  "peerDependencies": {
+    "vite": ">=7.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@babel/generator": "^7.28.3",
+    "@babel/parser": "^7.28.4",
+    "@babel/traverse": "^7.28.4",
+    "@babel/types": "^7.28.4"
+  }
+}
