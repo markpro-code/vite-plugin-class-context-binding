@@ -1,6 +1,6 @@
 # vite-plugin-class-context-binding
 
-this is a vite plugin to bind class context to the component.
+this is a vite plugin to bind class member context.
 
 ## Motivation
 
@@ -34,7 +34,7 @@ export default defineConfig({
 })
 ```
 
-## Binding method to class property
+## Transform method to class property
 
 if `forceMethodToClassProperty` is true, the plugin will transform all methods to class properties:
 ```javascript
@@ -84,25 +84,4 @@ to:
   __setterFn__name = (value) => {
     this.#name = value
   }
-```
-
-add unit tests for vue ref method/getter/setter, for example:
-
-```javascript
-  class MyClass {
-    #name = 'Mark'
-    get name() {
-      return this.#name
-    }
-    set name(value) {
-      this.#name = value
-    }
-    method() {
-      return this.#name
-    }
-  }
-  const ref = ref(new MyClass())
-  ref.value.name
-  ref.value.method()
-  ref.value.name = 'new name'
 ```
