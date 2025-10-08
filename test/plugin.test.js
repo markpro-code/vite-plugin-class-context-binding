@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { ref } from 'vue'
-import classContextBinding from '../src/index.js'
+import classContextBinding from '../lib/index.js'
 
 describe('vite-plugin-class-context-binding', () => {
   it('should transform class methods to class properties by default', () => {

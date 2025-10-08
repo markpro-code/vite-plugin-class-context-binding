@@ -15,3 +15,4 @@ export default defineConfig({
 })
 ```
 
+this plugin don't need to build with vite, using source code in lib/index.js directly.

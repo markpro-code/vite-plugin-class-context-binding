@@ -21,6 +21,14 @@ this plugin have two config options:
 
 the plugin will be used in the following way:
 
+install the plugin:
+
+```bash
+npm install --save-dev vite-plugin-class-context-binding
+```
+
+then add it to your vite config:
+
 ```javascript
 import { defineConfig } from 'vite'
 import classContextBinding from 'vite-plugin-class-context-binding'

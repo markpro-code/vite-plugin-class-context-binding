@@ -2,20 +2,17 @@
   "name": "vite-plugin-class-context-binding",
   "version": "1.0.0",
   "description": "A Vite plugin to solve class member context binding problem.",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.mjs",
   "exports": {
     ".": {
-      "import": "src/index.js"
+      "import": "lib/index.js"
     }
   },
   "files": [
-    "src",
+    "lib",
     "README.md"
   ],
   "scripts": {
-    "dev": "vite",
-    "build": "rm demo/*.tgz && npm pack --pack-destination ./demo && mv demo/*.tgz demo/vite-plugin.tgz && cd demo && rm -rf node_modules && pnpm install && npm run build",
+    "demo": "rm demo/*.tgz && npm pack --pack-destination ./demo && mv demo/*.tgz demo/vite-plugin.tgz && cd demo && rm -rf node_modules && pnpm install && npm run build",
     "test": "vitest",
     "lint": "eslint .",
     "format": "prettier --write ."
@@ -24,12 +21,13 @@
     "type": "git",
     "url": "git+https://github.com/markpro-code/vite-plugin-class-context-binding.git"
   },
+  "registry": "https://registry.npmjs.org",
   "keywords": [
     "vite",
     "vite-plugin"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Mark J",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/markpro-code/vite-plugin-class-context-binding/issues"
   },
